@@ -17,10 +17,12 @@ const URL = process.env.REACT_APP_URL;
 export default class App extends Component {
   render() {
     return (
-      <Router>
-        <Navigation />
-        <Home />
-      </Router>
+      <div className="App">
+        <Router>
+          <Navigation />
+          <Home />
+        </Router>
+      </div>
     )
   }
 }
