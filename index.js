@@ -1,13 +1,13 @@
 //======= require all dependencies
 require("dotenv").config();
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
 const app = express();
 
 //=== Middlewares
 require("./config/db"); //calls my mongoose connection to cleanup this file
 app.use(express.json()); //allows me to receive JSON files from HEADER of REQUEST
-// app.use(cors()); //allows all requests from outside servers or apps
+app.use(cors()); //allows all requests from outside servers or apps
 
 //=== Routes
 app.use("/api/clothings", require("./routes/clothing.route"));

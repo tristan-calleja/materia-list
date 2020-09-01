@@ -7,7 +7,7 @@ const clothingSchema = new mongoose.Schema({
     priority: String,
     price: String,
     notes: String,
-    url: String,
+    website: String,
     }, 
 { timestamps: true });
 

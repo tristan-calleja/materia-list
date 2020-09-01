@@ -35,7 +35,7 @@ router.put("/:id", async (req, res) => {
 
     if (clothing) {
       res.status(200).json({
-        message: "nothing spoil",
+        message: "Clothing updated with success",
       });
     }
   } catch (err) {

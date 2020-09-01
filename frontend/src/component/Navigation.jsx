@@ -21,7 +21,7 @@ export default class Navigation extends Component {
                             <Link className="nav-link text-dark" to="/clothing/something">
                                 My Budget
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/clothing">
                                 Clothing
                             </Link>
                             <Link className="nav-link text-dark" to="/clothing/something">

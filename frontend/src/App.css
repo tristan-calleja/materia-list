@@ -1,5 +1,5 @@
 .App {
-  background-color: rgba(0, 0, 0, 0.701);
+  background-color: whitesmoke;
 }
 
 .color-nav{
@@ -13,10 +13,10 @@
 .homepage{
   height: 100%;
 }
-
+/* 
 .homepage-mosaic{
   height: 50%;
-}
+} */
 /* 
 .quote-card-bg{
   background-color: rebeccapurple;
