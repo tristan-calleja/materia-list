@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button, Row } from "react-bootstrap";
+import { Form, Button, Row, Col, Container } from "react-bootstrap";
 
 export default class EditClothing extends Component {
   state = {
@@ -19,68 +19,80 @@ export default class EditClothing extends Component {
   };
 
   submitHandler = () => {
-    console.log(this.props);
-    // this.props.EditClothing(this.state, this.props.clothing._id);
+    console.log(this.props.editClothing);
+    this.props.editClothing(this.state, this.props.clothing._id);
   };
 
   render() {
     let { brand, piece, category, priority, price, notes, website } = this.state;
     return (
-      <div>
-        <h1>Edit Clothing</h1>
-        <div>
-          <Row>
-            <Form.Control
-              name="brand"
-              value={brand}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="piece"
-              value={piece}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="category"
-              value={category}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="priority"
-              value={priority}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="price"
-              value={price}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="notes"
-              value={notes}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Row>
-            <Form.Control
-              name="website"
-              value={website}
-              onChange={this.changeHandler}
-            />
-          </Row>
-          <Button onClick={this.submitHandler}>Submit</Button>
-        </div>
-      </div>
+      <Container className="mt-3">
+        
+        <Row>
+            <Col>
+                <h1>Edit</h1>
+            </Col>
+        </Row>
+
+        <Row>
+            <Col className="col-9">
+                <div>
+                    <Row>
+                        <Form.Control
+                        name="brand"
+                        value={brand}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="piece"
+                        value={piece}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="category"
+                        value={category}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="priority"
+                        value={priority}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="price"
+                        value={price}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="notes"
+                        value={notes}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Form.Control
+                        name="website"
+                        value={website}
+                        onChange={this.changeHandler}
+                        />
+                    </Row>
+                    <Row>
+                        <Button onClick={this.submitHandler} className="mt-2" size="sm">Submit</Button>
+                    </Row>
+                </div>
+            </Col>
+        </Row>
+      </Container>
     );
   }
 }

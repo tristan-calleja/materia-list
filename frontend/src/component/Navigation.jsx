@@ -18,6 +18,9 @@ export default class Navigation extends Component {
                             <Link className="nav-link text-dark" to="/">
                                 Home
                             </Link>
+                            <Link className="nav-link text-dark" to="/about">
+                                About
+                            </Link>
                             <Link className="nav-link text-dark" to="/clothing/something">
                                 My Budget
                             </Link>

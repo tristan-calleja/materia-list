@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Row, Col, Button, Table, InputGroup, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-// import EditClothing from "./EditClothing";
 // import AddClothing from "./AddClothing";
 
 const URL = process.env.REACT_APP_URL;
@@ -73,9 +72,11 @@ export default class AllClothing extends Component {
                 <Col className="col-6">
                 </Col>
                 <Col className="col-2">
-                    <Button variant="secondary">
-                        Add Clothing to Set-Up
+                <Link className="nav-link" to="/clothings/add">
+                    <Button variant="info">
+                        Add To List
                     </Button>
+                </Link>
                 </Col>
             </Row>
         </Container >
@@ -104,11 +105,12 @@ export default class AllClothing extends Component {
                     <td> {clothing.priority} </td>
                     <td> {clothing.price} </td>
                     <td> {clothing.notes} </td>
-                    <td> {clothing.website} </td>
                     <td>
-                        <Button className="m-1" size="sm">
-                            Edit to Set-Up
-                        </Button>
+                        <a href={clothing.website} style={{display: "table-cell"}} target="_blank" rel="noopener noreferrer">
+                            Visit
+                        </a>
+                    </td>
+                    <td>
                         <Button
                             onClick={this.deleteClothing}
                             variant="danger"
@@ -122,30 +124,6 @@ export default class AllClothing extends Component {
                 ))}
             </tbody>
             </Table>
-
-        {/* <Container fluid>
-          <Row>
-            {this.state.clothings.map((clothing) => (
-              <Col key={clothing._id} md="3" className="mb-3">
-                <Card>
-                  <Card.Body>
-                    {item.name}
-                    <div>
-                      <Link to={`/item/${item._id}`}>See Item</Link>
-                      <Button
-                        onClick={this.deleteItem}
-                        variant="danger"
-                        id={item._id}
-                      >
-                        Delete
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container> */}
       </div>
     );
   }

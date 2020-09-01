@@ -12,6 +12,7 @@ import Navigation from "./component/Navigation";
 // import PrivateRoute from "./component/PrivateRoute";
 // import { Alert } from "react-bootstrap";
 import './App.css';
+import AddClothing from './component/clothings/AddClothing';
 
 const URL = process.env.REACT_APP_URL;
 
@@ -35,13 +36,15 @@ export default class App extends Component {
 
           <Route path="/clothing" exact render={() => <AllClothing />} />
 
-          {/* <Route path="/clothing/:id" exact render={(props) => <Clothing {...props} />} /> */}
+          <Route path="/clothing/:id" exact render={(props) => <Clothing {...props} />} />
 
-          <Route
+          <Route path="/clothings/add" exact render={() => <AddClothing />} />
+
+          {/* <Route
             exact
             path="/clothing/:id"
             component={Clothing}
-          />
+          /> */}
 
           {/* <Route path="/item/add" exact render={() => <AddItem />} />
           <PrivateRoute

@@ -5,6 +5,7 @@ import wine from '../images/wine.png';
 // import cheaney from '../images/Cheaney.png';
 import clothing from '../images/clothing.png';
 import watch from '../images/MKII.png';
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     render() {
@@ -20,7 +21,7 @@ export default class Home extends Component {
                             </Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className="p-3">
+                        <Card className="p-3 text-right">
                             <blockquote className="blockquote mb-0 card-body">
                             <p>
                                 “La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer.”
@@ -42,6 +43,7 @@ export default class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card>
+                            <a href="/clothing" class="text-warning stretched-link">
                             <Card.Img variant="top" src={clothing} />
                             <Card.Body>
                             <Card.Title>Clothing</Card.Title>
@@ -52,6 +54,7 @@ export default class Home extends Component {
                             <Card.Footer>
                             <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
+                            </a>
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">
@@ -65,19 +68,17 @@ export default class Home extends Component {
                             </footer>
                             </blockquote>
                         </Card>
-                        <Card className="text-center">
+                        <Card>
                             <Card.Body>
                             <Card.Title>Watches</Card.Title>
                             <Card.Text>
                                 This will be the watch section.{' '}
                             </Card.Text>
-                            <Card.Text>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Text>
                             </Card.Body>
-                        </Card>
-                        <Card>
                             <Card.Img src={watch} />
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">

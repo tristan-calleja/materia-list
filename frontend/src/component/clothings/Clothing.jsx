@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 import EditClothing from "./EditClothing";
 import { Container, Button } from "react-bootstrap";
+import HighlightChange from "react-change-highlight";
 
 const URL = process.env.REACT_APP_URL;
 
@@ -48,19 +49,21 @@ export default class Clothing extends Component {
     let { clothing, edit } = this.state;
 
     return (
-      <Container>
-        <h1>Single Clothing</h1>
-
+      <Container className="mt-3">
         {clothing ? (
           <div>
-            <div> <strong>{clothing.brand}</strong> {"- "} {clothing.piece} </div>
+            <div> <h3><strong>{clothing.brand}</strong> {"- "} {clothing.piece}</h3> </div>
             <div> Category: {clothing.category} </div>
             <div> Priority: {clothing.priority} </div>
             <div> Price: {clothing.price} </div>
             <div> Notes: {clothing.notes} </div>
-            <div> Website: {clothing.website} </div>
+            <div>
+                <a href={clothing.website} style={{display: "table-cell"}} target="_blank" rel="noopener noreferrer">
+                    Website
+                </a>
+            </div>
 
-            <Button onClick={this.showEdit}>Edit Clothing</Button>
+            <Button onClick={this.showEdit} className="mt-2" size="sm"> Edit Clothing </Button>
             {edit && <EditClothing clothing={clothing} editClothing={this.editClothings} />}
           </div>
         ) : (
