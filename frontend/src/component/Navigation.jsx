@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logomaterialistblack from '../images/logo-materia-list.png';
 
-export default class Navigation extends Component {
-    render() {
+function Navigation({ user, logout }) {
         return (
             <div>
                 <Navbar className="color-nav" expand="lg" variant="light">
@@ -13,16 +12,16 @@ export default class Navigation extends Component {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
+
                         <Nav className="mr-auto">
+                            {/* {user ? (
+                            <> */}
                             {/* Remove home link at the end */}
                             {/* <Link className="nav-link text-dark" to="/">
                                 Home
                             </Link> */}
                             <Link className="nav-link text-dark" to="/about">
                                 About
-                            </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
-                                My Budget
                             </Link>
                             <Link className="nav-link text-dark" to="/clothing">
                                 Clothing
@@ -37,10 +36,33 @@ export default class Navigation extends Component {
                                 Wines
                             </Link>
                         </Nav>
+                        
                         <Nav className="ml-auto">
+                        {user ? (
+                        <>
                             <Link className="nav-link text-dark" to="/clothing/something">
                                <Button variant="outline-dark"> My Profile </Button>
                             </Link>
+
+                            <Link className="nav-link text-dark" to="/clothing/something">
+                                <Button variant="outline-dark">  My Budget </Button>
+                            </Link>
+
+                            <Link to="/logout" onClick={logout} className="nav-link">
+                                <Button variant="dark"> Logout </Button>
+                            </Link>
+
+                        </>
+                        ) : (
+                        <>
+                            <Link to="/login" className="nav-link">
+                                <Button variant="outline-dark"> Login </Button>
+                            </Link>
+                            <Link to="/register" className="nav-link">
+                                <Button variant="dark"> Register </Button>
+                            </Link>
+                        </>
+                        )}
                         </Nav>
 
                     </Navbar.Collapse>
@@ -48,6 +70,7 @@ export default class Navigation extends Component {
             </div>
         );
     }
-}
+
+export default Navigation;
 
 //bg="light" expand="lg" variant="dark"

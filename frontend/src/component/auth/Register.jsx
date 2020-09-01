@@ -14,7 +14,6 @@ export default class Register extends Component {
   };
 
   registerHandler = () => {
-    //login here
     this.props.register(this.state);
   };
 
