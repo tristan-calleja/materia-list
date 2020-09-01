@@ -15,9 +15,9 @@ export default class Navigation extends Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             {/* Remove home link at the end */}
-                            <Link className="nav-link text-dark" to="/">
+                            {/* <Link className="nav-link text-dark" to="/">
                                 Home
-                            </Link>
+                            </Link> */}
                             <Link className="nav-link text-dark" to="/about">
                                 About
                             </Link>

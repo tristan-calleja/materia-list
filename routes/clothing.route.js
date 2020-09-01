@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Clothing = require("../model/clothing.model");
-// const checkToken = require("../config/config");
+const checkToken = require("../config/config");
 
 /* 
     @route GET api/clothings/:id
@@ -98,10 +98,9 @@ router.post("/", async (req, res) => {
     @desc Gets all clothings
     @access public
 */
-// router.get("/", checkToken, async (req, res) => {
-router.get("/", async (req, res) => {
+router.get("/", checkToken, async (req, res) => {
+// router.get("/", async (req, res) => {
     // console.log(req.user);
-
   try {
     let clothings = await Clothing.find();
 
