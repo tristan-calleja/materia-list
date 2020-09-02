@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Button, Table, InputGroup, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-// import AddClothing from "./AddClothing";
+import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
 const URL = process.env.REACT_APP_URL;
 
@@ -10,28 +10,17 @@ export default class AllClothing extends Component {
   
     state = {
     clothings: [],
-  };
+    };
 
-//   fetchClothings = () => {
-//     let token = localStorage.getItem("token");
-
-//     Axios.get(`${URL}/clothings`, {
-//       headers: {
-//         "x-auth-token": token,
-//       },
-//     })
-//       .then((res) => {
-//         this.setState({ clothings: res.data.clothings });
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   };
-
+    //VERSION POST AUTHENTICATION
   fetchClothings = () => {
+    let token = localStorage.getItem("token");
 
-    Axios.get(`${URL}/clothings`)
-    //   console.log("it works or not?");
+    Axios.get(`${URL}/clothings`, {
+      headers: {
+        "x-auth-token": token,
+      },
+    })
       .then((res) => {
         this.setState({ clothings: res.data.clothings });
       })
@@ -39,6 +28,19 @@ export default class AllClothing extends Component {
         console.log(err);
       });
   };
+
+    //VERSION PRIOR AUTHENTICATION
+  // fetchClothings = () => {
+
+  //   Axios.get(`${URL}/clothings`)
+  //   //   console.log("it works or not?");
+  //     .then((res) => {
+  //       this.setState({ clothings: res.data.clothings });
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
 
   deleteClothing = (e) => {
     // console.log(e.target.id);
@@ -80,7 +82,6 @@ export default class AllClothing extends Component {
                 </Col>
             </Row>
         </Container >
-
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>

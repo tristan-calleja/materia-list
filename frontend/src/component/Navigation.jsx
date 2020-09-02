@@ -14,12 +14,8 @@ function Navigation({ user, logout }) {
                     <Navbar.Collapse id="basic-navbar-nav">
 
                         <Nav className="mr-auto">
-                            {/* {user ? (
-                            <> */}
-                            {/* Remove home link at the end */}
-                            {/* <Link className="nav-link text-dark" to="/">
-                                Home
-                            </Link> */}
+                            {user ? (
+                            <>
                             <Link className="nav-link text-dark" to="/about">
                                 About
                             </Link>
@@ -35,6 +31,10 @@ function Navigation({ user, logout }) {
                             <Link className="nav-link text-dark" to="/clothing/something">
                                 Wines
                             </Link>
+                            </>
+                            ) : (
+                            <> <h3> Welcome to Materia-List </h3></>
+                            )}
                         </Nav>
                         
                         <Nav className="ml-auto">
