@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Card, CardColumns } from "react-bootstrap";
 import budget from '../images/budget.png';
 import wine from '../images/wine.png';
-// import cheaney from '../images/Cheaney.png';
 import clothing from '../images/clothing.png';
 import watch from '../images/MKII.png';
 import { Link } from 'react-router-dom';

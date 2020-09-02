@@ -1,5 +1,5 @@
 .App {
-  background-color: whitesmoke;
+/* background-image: url(./images/cool-background.png); */
 }
 
 .color-nav{
@@ -13,6 +13,12 @@
 .homepage{
   height: 100%;
 }
+
+.profilePic{
+  max-width: 355px;
+  max-height: 680px;
+}
+
 /* 
 .homepage-mosaic{
   height: 50%;

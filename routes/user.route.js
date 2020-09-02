@@ -27,4 +27,28 @@ const checkToken = require("../config/config");
     }
   });
 
+  /* 
+    @route PUT api/items/:id
+    @desc updates one item
+    @access public
+*/
+router.put("/user", async (req, res) => {
+    try {
+      let user = await Item.findByIdAndUpdate(req.user.id, req.body);
+  
+      if (user) {
+        res.status(200).json({
+          message: "User details updated with success",
+        });
+      }
+    } catch (err) {
+      res.status(500).json({
+        message: "Cannot update user details",
+      });
+    }
+  });
+
+
+
+
 module.exports = router;
