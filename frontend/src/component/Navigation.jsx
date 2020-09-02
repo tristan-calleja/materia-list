@@ -40,7 +40,7 @@ function Navigation({ user, logout }) {
                         <Nav className="ml-auto">
                         {user ? (
                         <>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/user">
                                <Button variant="outline-dark"> My Profile </Button>
                             </Link>
 

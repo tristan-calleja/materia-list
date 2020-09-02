@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button, Table, InputGroup, FormControl } from "react-bootstrap";
+import { Container, Row, Col, Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
+// import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
 const URL = process.env.REACT_APP_URL;
 
@@ -60,7 +60,7 @@ export default class AllClothing extends Component {
             <Row>
                 <Col className="col-4">
                     <h3>Your Clothing Wishlist</h3>
-                    <InputGroup className="mb-3">
+                    {/* <InputGroup className="mb-3">
                         <FormControl
                         placeholder="Search for a brand or a piece"
                         aria-label="Search for a brand or a piece"
@@ -69,7 +69,7 @@ export default class AllClothing extends Component {
                         <InputGroup.Append>
                         <Button variant="outline-secondary"> Search </Button>
                         </InputGroup.Append>
-                    </InputGroup>
+                    </InputGroup> */}
                 </Col>
                 <Col className="col-6">
                 </Col>

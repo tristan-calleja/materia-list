@@ -5,7 +5,7 @@ import wine from '../images/wine.png';
 // import cheaney from '../images/Cheaney.png';
 import clothing from '../images/clothing.png';
 import watch from '../images/MKII.png';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     render() {
@@ -43,7 +43,8 @@ export default class Home extends Component {
                             </Card.Body>
                         </Card>
                         <Card>
-                            <a href="/clothing" class="text-warning stretched-link">
+                            {/* <a href="/clothing" class="text-warning stretched-link"> */}
+                            <Link to="/clothing" className="text-warning stretched-link">
                             <Card.Img variant="top" src={clothing} />
                             <Card.Body>
                             <Card.Title>Clothing</Card.Title>
@@ -54,7 +55,8 @@ export default class Home extends Component {
                             <Card.Footer>
                             <small className="text-muted">Last updated 3 mins ago</small>
                             </Card.Footer>
-                            </a>
+                            {/* </a> */}
+                            </Link >
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">

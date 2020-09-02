@@ -5,6 +5,7 @@ import AllClothing from "./component/clothings/AllClothing";
 import Clothing from "./component/clothings/Clothing";
 import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
+import UserProfile from "./component/user/UserProfile";
 import Navigation from "./component/Navigation";
 import Axios from "axios";
 import AddClothing from './component/clothings/AddClothing';
@@ -146,6 +147,8 @@ export default class App extends Component {
 
               <PrivateRoute exact path="/clothings/add" isAuth={isAuth} component={AddClothing} />
               {/* <Route path="/clothings/add" exact render={() => <AddClothing />} /> */}
+
+              <PrivateRoute exact path="/user" isAuth={isAuth} component={UserProfile} />
               
               <Route
                 path="/register"
@@ -159,6 +162,7 @@ export default class App extends Component {
                   isAuth ? <Redirect to="/" /> : <Login login={this.loginHandler} />
                 }
               />
+
           </Switch>
 
         </Router>

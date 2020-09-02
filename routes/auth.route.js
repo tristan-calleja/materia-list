@@ -3,6 +3,7 @@ const User = require("../model/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const checkToken = require("../config/config");
+
 /* 
     @route POST api/auth/register
     @desc register user
@@ -95,7 +96,7 @@ router.post("/login", async (req, res) => {
 router.get("/user", checkToken, async (req, res) => {
   try {
     let user = await User.findById(req.user.id, "-password");
-
+    // console.log("user profile");
     res.status(200).json({
       user,
     });

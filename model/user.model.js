@@ -19,6 +19,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    username: String,
+    country: String,
+    image: {
+      type: String,
+      default: "images/logo-materia-list.png"
+    },
+    about: String,
   },
   { timestamps: true }
 );
