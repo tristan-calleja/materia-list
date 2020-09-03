@@ -7,6 +7,7 @@ import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
 import UserProfile from "./component/user/UserProfile";
 import Navigation from "./component/Navigation";
+import About from "./component/About";
 import Axios from "axios";
 import AddClothing from './component/clothings/AddClothing';
 import { decode } from "jsonwebtoken";
@@ -149,6 +150,8 @@ export default class App extends Component {
               {/* <Route path="/clothings/add" exact render={() => <AddClothing />} /> */}
 
               <PrivateRoute exact path="/user" isAuth={isAuth} component={UserProfile} />
+
+              <PrivateRoute exact path="/about" isAuth={isAuth} component={About} />
               
               <Route
                 path="/register"

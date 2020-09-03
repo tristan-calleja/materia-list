@@ -52,22 +52,24 @@ export default class Clothing extends Component {
       <Container className="mt-3">
         {clothing ? (
           <div>
-            <div> <h3><strong>{clothing.brand}</strong> {"- "} {clothing.piece}</h3> </div>
-            <div> Category: {clothing.category} </div>
-            <div> Priority: {clothing.priority} </div>
-            <div> Price: {clothing.price} </div>
-            <div> Notes: {clothing.notes} </div>
-            <div>
+            <div className="mt-3 mb-3"> 
+              <h3><strong>{clothing.brand}</strong> {"- "} {clothing.piece}</h3> 
+              <Button onClick={this.showEdit} className="mt-2" size="sm" variant="info"> Edit Clothing </Button> 
+            </div>
+            <div className="mb-2"> <strong>Category:</strong> {clothing.category} </div>
+            <div className="mb-2"> <strong>Priority:</strong> {clothing.priority} </div>
+            <div className="mb-2"> <strong>Price:</strong> {clothing.price} </div>
+            <div className="mb-2"> <strong>Notes:</strong> {clothing.notes} </div>
+            <div className="mb-2">
                 <a href={clothing.website} style={{display: "table-cell"}} target="_blank" rel="noopener noreferrer">
                     Website
                 </a>
             </div>
 
-            <Button onClick={this.showEdit} className="mt-2" size="sm"> Edit Clothing </Button>
             {edit && <EditClothing clothing={clothing} editClothing={this.editClothings} />}
           </div>
         ) : (
-          "Nothing to show man"
+          "We are currently working on creating this feature. Please bear with us."
         )}
       </Container>
     );

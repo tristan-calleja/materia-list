@@ -34,7 +34,7 @@ export default class UserProfile extends Component {
         },
       })
         .then((res) => {
-          // console.log(res.data);
+          console.log(res.data);
           this.setState({
             isAuth: true,
             user: res.data.user,
@@ -112,7 +112,7 @@ export default class UserProfile extends Component {
 
         return (
             <div>
-                <div className="mt-3 mb-2">
+                <div className="mt-3 mb-4 ml-4">
                   {user ? (
                     <h1>Welcome <i>{user.firstname} {user.lastname}</i> </h1>
                   ) : (
@@ -133,7 +133,7 @@ export default class UserProfile extends Component {
                               <Row>
 
                                 <Col className="col-5">
-                                  PUT A TERNARY FOR DEFAULT IF IMG=NULL AND IMAGE IF THERE IS ONE TIED TO USER
+                                  {/* PUT A TERNARY FOR DEFAULT IF IMG=NULL AND IMAGE IF THERE IS ONE TIED TO USER */}
                                   <Image src={defaultPic} className="profilePic" rounded />
                                 </Col>
 
@@ -161,7 +161,9 @@ export default class UserProfile extends Component {
                     
                     <Tab eventKey="edit" title="Edit">
                       <EditProfile />
-                      {/* <Route path="/clothing/:id" exact render={(props) => <Clothing {...props} />} /> */}
+
+
+
                     </Tab>
 
                     <Tab eventKey="Something Else?" title="Something Else?" disabled>

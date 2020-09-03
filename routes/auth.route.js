@@ -107,18 +107,58 @@ router.get("/user", checkToken, async (req, res) => {
   }
 });
 
-router.put("/user", async (req, res) => {
-  try {
-    let user = await Item.findByIdAndUpdate(req.user.id, "-password", req.body);
+// router.get("/about", checkToken, async (req, res) => {
+//   try {
+//     let user = await User.findById(req.user.id, "-password");
+//     console.log("user profile");
+//     res.status(200).json({
+//       user,
+//     });
+//   } catch (error) {
+//     res.status(500).json({
+//       message: "Something is wrong for the about!",
+//     });
+//   }
+// });
 
+// router.put("/user", async (req, res) => {
+//   try {
+//     let user = await Item.findByIdAndUpdate(req.user.id, "-password", req.body);
+
+//     if (user) {
+//       res.status(200).json({
+//         message: "User details updated with success",
+//       });
+//     }
+//   } catch (err) {
+//     res.status(500).json({
+//       message: "Cannot update user details",
+//     });
+//   }
+// });
+
+router.put("/user", checkToken, async (req, res) => {
+  try {
+    let editedUser = {
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      username: req.body.username,
+      email: req.body.email,
+      country: req.body.country,
+      about: req.body.about,
+      // image: req.body.image,
+      // password: req.body.password,
+    };
+    let user = await User.findByIdAndUpdate(req.user.id, editedUser);
     if (user) {
       res.status(200).json({
-        message: "User details updated with success",
+        message: "User has been editied",
+        user,
       });
     }
   } catch (err) {
     res.status(500).json({
-      message: "Cannot update user details",
+      message: "Something went wrong",
     });
   }
 });

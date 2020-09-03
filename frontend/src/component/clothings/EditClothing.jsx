@@ -29,57 +29,68 @@ export default class EditClothing extends Component {
       <Container className="mt-3">
         
         <Row>
-            <Col>
-                <h1>Edit</h1>
-            </Col>
+                <h3>Edit Item Details</h3>
         </Row>
 
-        <Row>
-            <Col className="col-9">
-                <div>
-                    <Row>
+                <Row>
+                  <Col className="col-5">
+                    <Row  className="mb-2">
+                      <strong>Brand</strong>
                         <Form.Control
                         name="brand"
                         value={brand}
                         onChange={this.changeHandler}
                         />
                     </Row>
-                    <Row>
+                    <Row className="mb-2">
+                    <strong>Piece</strong>
                         <Form.Control
                         name="piece"
                         value={piece}
                         onChange={this.changeHandler}
                         />
                     </Row>
-                    <Row>
+                    <Row className="mb-2">
+                    <strong>Category</strong>
                         <Form.Control
                         name="category"
                         value={category}
                         onChange={this.changeHandler}
                         />
                     </Row>
-                    <Row>
+                    <Row className="mb-2">
+                    <strong>Priority</strong>
                         <Form.Control
                         name="priority"
                         value={priority}
                         onChange={this.changeHandler}
                         />
                     </Row>
-                    <Row>
+                  </Col>
+
+                  <Col className="col-1"></Col>
+                    
+
+                  <Col className="col-5">
+                    <Row className="mb-2">
+                    <strong>Price</strong>
                         <Form.Control
                         name="price"
                         value={price}
                         onChange={this.changeHandler}
                         />
                     </Row>
-                    <Row>
+                    <Row className="mb-2">
+                    <strong>Notes</strong>
                         <Form.Control
                         name="notes"
                         value={notes}
                         onChange={this.changeHandler}
+                        as="textarea" rows="4"
                         />
                     </Row>
-                    <Row>
+                    <Row className="mb-2">
+                    <strong>Website</strong>
                         <Form.Control
                         name="website"
                         value={website}
@@ -87,11 +98,13 @@ export default class EditClothing extends Component {
                         />
                     </Row>
                     <Row>
-                        <Button onClick={this.submitHandler} className="mt-2" size="sm">Submit</Button>
+                      <Button onClick={this.submitHandler} className="mt-2 ml-auto"  variant="info">Update</Button>
                     </Row>
-                </div>
-            </Col>
-        </Row>
+                  </Col>
+                </Row>
+
+
+
       </Container>
     );
   }
