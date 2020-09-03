@@ -43,6 +43,7 @@ router.post("/register", async (req, res) => {
     );
   } catch (error) {
     //   500 internal server error
+    console.log(error);
     res
       .status(500)
       .json({ message: "User registration did not work" });
