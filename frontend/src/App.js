@@ -86,6 +86,7 @@ export default class App extends Component {
 
   registerHandler = (credentials) => {
     //login here
+    console.log(URL);
     Axios.post(`${URL}/auth/register`, credentials)
       .then((res) => {
         console.log(res.data);
