@@ -154,18 +154,24 @@ export default class App extends Component {
 
               <PrivateRoute exact path="/about" isAuth={isAuth} component={About} />
               
-              <Route
-                path="/register"
-                exact
-                render={() => <Register register={this.registerHandler} />}
-              />
-              <Route
-                path="/login"
-                exact
-                render={() =>
-                  isAuth ? <Redirect to="/" /> : <Login login={this.loginHandler} />
-                }
-              />
+              <div className="auth-wrapper mt-5">
+                <div className="auth-inner">
+
+                  <Route
+                    path="/register"
+                    exact
+                    render={() => <Register register={this.registerHandler} />}
+                  />
+                  <Route
+                    path="/login"
+                    exact
+                    render={() =>
+                      isAuth ? <Redirect to="/" /> : <Login login={this.loginHandler} />
+                    }
+                  />
+                  
+                </div>
+              </div>
 
           </Switch>
 

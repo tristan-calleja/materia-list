@@ -108,36 +108,6 @@ router.get("/user", checkToken, async (req, res) => {
   }
 });
 
-// router.get("/about", checkToken, async (req, res) => {
-//   try {
-//     let user = await User.findById(req.user.id, "-password");
-//     console.log("user profile");
-//     res.status(200).json({
-//       user,
-//     });
-//   } catch (error) {
-//     res.status(500).json({
-//       message: "Something is wrong for the about!",
-//     });
-//   }
-// });
-
-// router.put("/user", async (req, res) => {
-//   try {
-//     let user = await Item.findByIdAndUpdate(req.user.id, "-password", req.body);
-
-//     if (user) {
-//       res.status(200).json({
-//         message: "User details updated with success",
-//       });
-//     }
-//   } catch (err) {
-//     res.status(500).json({
-//       message: "Cannot update user details",
-//     });
-//   }
-// });
-
 router.put("/user", checkToken, async (req, res) => {
   try {
     let editedUser = {

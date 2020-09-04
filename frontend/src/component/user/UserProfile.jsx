@@ -112,7 +112,7 @@ export default class UserProfile extends Component {
 
         return (
             <div>
-                <div className="mt-3 mb-4 ml-4">
+                <div className="mt-3 mb-4 ml-4 heading">
                   {user ? (
                     <h1>Welcome <i>{user.firstname} {user.lastname}</i> </h1>
                   ) : (

@@ -45,7 +45,7 @@ class AddClothing extends Component {
         
         <Row className="mb-3">
             <Col>
-                <h3> Add a Clothing Item to your Wishlist </h3>
+                <h3  className="heading"> Add a Clothing Item to your Wishlist </h3>
             </Col>
         </Row>
 

@@ -59,7 +59,7 @@ export default class AllClothing extends Component {
         <Container fluid className="mb-2">
             <Row>
                 <Col className="col-4">
-                    <h3>Your Clothing Wishlist</h3>
+                    <h3  className="heading">Your Clothing Wishlist</h3>
                     {/* <InputGroup className="mb-3">
                         <FormControl
                         placeholder="Search for a brand or a piece"

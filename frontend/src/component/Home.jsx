@@ -14,7 +14,7 @@ export default class Home extends Component {
                         <Card>
                             <Card.Img variant="top" src={budget} />
                             <Card.Body>
-                            <Card.Title>My Budget</Card.Title>
+                            <Card.Title className="heading">My Budget</Card.Title>
                             <Card.Text>
                                 This will be the budget section
                             </Card.Text>
@@ -35,7 +35,7 @@ export default class Home extends Component {
                         <Card>
                             <Card.Img variant="top" src={wine} />
                             <Card.Body>
-                            <Card.Title>Wines</Card.Title>
+                            <Card.Title className="heading">Wines</Card.Title>
                             <Card.Text>
                                 This will be the budget section
                             </Card.Text>
@@ -46,7 +46,7 @@ export default class Home extends Component {
                             <Link to="/clothing" className="text-warning stretched-link">
                             <Card.Img variant="top" src={clothing} />
                             <Card.Body>
-                            <Card.Title>Clothing</Card.Title>
+                            <Card.Title className="heading">Clothing</Card.Title>
                             <Card.Text>
                                 This will be the clothing section.{' '}
                             </Card.Text>
@@ -71,7 +71,7 @@ export default class Home extends Component {
                         </Card>
                         <Card>
                             <Card.Body>
-                            <Card.Title>Watches</Card.Title>
+                            <Card.Title className="heading">Watches</Card.Title>
                             <Card.Text>
                                 This will be the watch section.{' '}
                             </Card.Text>
@@ -95,7 +95,7 @@ export default class Home extends Component {
                         </Card>
                         <Card>
                             <Card.Body>
-                            <Card.Title>Shoes</Card.Title>
+                            <Card.Title className="heading">Shoes</Card.Title>
                             <Card.Text>
                                 This will be the shoes section
                             </Card.Text>

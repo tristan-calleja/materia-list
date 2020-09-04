@@ -6,10 +6,18 @@ import logomaterialistblack from '../images/logo-materia-list.png';
 function Navigation({ user, logout }) {
         return (
             <div>
-                <Navbar className="color-nav" expand="lg" variant="light">
+                <Navbar className="color-nav navbar-style" expand="lg" variant="light">
+                    {user ? (
+                    <>
                     <Navbar.Brand href="/">
                         <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
                     </Navbar.Brand>
+                    </>
+                    ) : (
+                    <Navbar.Brand href="/login">
+                        <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
+                    </Navbar.Brand>
+                    )}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
 
