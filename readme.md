@@ -19,11 +19,11 @@ Buy Less, Buy Better.
 
 ![ERD](app/assets/images/ERD.png) -->
 
-#####Below, an overview of the app as first conceptualized.
+##### Below, an overview of the app as first conceptualized.
 
 ![Wireframes Overview](./assets/images/wireframes-overview.png)
 
-#####Below, the wireframe of how the main table has been imagined at first.
+##### Below, the wireframe of how the main table has been imagined at first.
 
 ![Wireframe for All Clothing Page](./assets/images/Wireframe-AllClothing.png)
 
