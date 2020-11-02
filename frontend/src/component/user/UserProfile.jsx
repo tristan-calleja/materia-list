@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Row, Col, Label, Form, Container, Image } from "react-bootstrap";
+import { Tabs, Tab, Row, Col, Container, Image } from "react-bootstrap";
 import Axios from "axios";
 import EditProfile from './EditProfile';
 import { decode } from "jsonwebtoken";
@@ -108,7 +108,7 @@ export default class UserProfile extends Component {
 
     render() {
 
-      let { user, edit } = this.state;
+      let { user } = this.state;
 
         return (
             <div>

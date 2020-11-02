@@ -15,7 +15,6 @@ import PrivateRoute from "./component/PrivateRoute";
 import { Alert } from "react-bootstrap";
 import './App.css';
 
-
 const URL = process.env.REACT_APP_URL;
 
 export default class App extends Component {
@@ -55,7 +54,7 @@ export default class App extends Component {
         });
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         // this.setState({
         //   isAuth: false,
         // });
@@ -97,7 +96,7 @@ export default class App extends Component {
         });
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         this.setState({
           isAuth: false,
         });
@@ -160,7 +159,7 @@ export default class App extends Component {
                   <Route
                     path="/register"
                     exact
-                    render={() => <Register register={this.registerHandler} />}
+                    render={() => isAuth ? <Redirect to="/" /> : <Register register={this.registerHandler} />}
                   />
                   <Route
                     path="/login"

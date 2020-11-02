@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Row, Col, Label, Form, Container, Image, Button } from "react-bootstrap";
+import { Row, Col, Container, Image, Button } from "react-bootstrap";
 import clothing from '../images/clothing.png';
 
 export default class About extends Component {

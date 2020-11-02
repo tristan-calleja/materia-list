@@ -66,9 +66,10 @@ function Navigation({ user, logout }) {
                             <Link to="/login" className="nav-link">
                                 <Button variant="outline-dark"> Login </Button>
                             </Link>
-                            <Link to="/register" className="nav-link">
+                            {/* REGISTER BUTTON DISABLED SINCE IT'S A PERSONAL APP */}
+                            {/* <Link to="/register" className="nav-link">
                                 <Button variant="dark"> Register </Button>
-                            </Link>
+                            </Link> */}
                         </>
                         )}
                         </Nav>

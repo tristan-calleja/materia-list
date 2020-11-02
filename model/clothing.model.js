@@ -8,6 +8,10 @@ const clothingSchema = new mongoose.Schema({
     price: String,
     notes: String,
     website: String,
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
     }, 
 { timestamps: true });
 

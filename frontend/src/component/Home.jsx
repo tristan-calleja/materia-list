@@ -43,7 +43,7 @@ export default class Home extends Component {
                         </Card>
                         <Card>
                             {/* <a href="/clothing" class="text-warning stretched-link"> */}
-                            <Link to="/clothing" className="text-warning stretched-link">
+                            <Link to="/clothing" className="text-warning stretched-link" style={{ textDecoration: 'none' }}>
                             <Card.Img variant="top" src={clothing} />
                             <Card.Body>
                             <Card.Title className="heading">Clothing</Card.Title>
