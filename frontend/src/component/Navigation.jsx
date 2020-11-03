@@ -9,13 +9,17 @@ function Navigation({ user, logout }) {
                 <Navbar className="color-nav navbar-style" expand="lg" variant="light">
                     {user ? (
                     <>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand>
+                        <Link to="/" >
                         <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
+                        </Link>
                     </Navbar.Brand>
                     </>
                     ) : (
-                    <Navbar.Brand href="/login">
+                    <Navbar.Brand>
+                        <Link to="/login" >
                         <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
+                        </Link>
                     </Navbar.Brand>
                     )}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,7 +34,7 @@ function Navigation({ user, logout }) {
                             <Link className="nav-link text-dark" to="/clothing">
                                 Clothing
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/shoe">
                                 Shoes
                             </Link>
                             <Link className="nav-link text-dark" to="/clothing/something">

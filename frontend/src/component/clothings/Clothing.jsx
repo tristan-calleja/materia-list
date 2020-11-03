@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Axios from "axios";
 import EditClothing from "./EditClothing";
 import { Container, Button } from "react-bootstrap";
-import { useTable, useFilters, useGlobalFilter, useAsyncDebounce } from 'react-table';
-import {matchSorter} from 'match-sorter';
 // import HighlightChange from "react-change-highlight";
 
 const URL = process.env.REACT_APP_URL;
@@ -46,8 +44,6 @@ export default class Clothing extends Component {
   componentDidMount() {
     this.getClothing();
   }
-
-  
 
   render() {
     let { clothing, edit } = this.state;

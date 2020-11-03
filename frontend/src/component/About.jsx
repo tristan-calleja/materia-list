@@ -57,6 +57,7 @@ export default class About extends Component {
                         </Row>
                         </div>
                     </div>
+
                     {/* <div className="wrapper">
                         <div className="images">
                             <div className="image"></div>
@@ -79,6 +80,7 @@ export default class About extends Component {
                         </svg>
                         </div>
                     </div> */}
+                    
             </Container>
             
         )

@@ -3,13 +3,18 @@ import { Switch, BrowserRouter as Router, Route, Redirect, } from "react-router-
 import Home from "./component/Home";
 import AllClothing from "./component/clothings/AllClothing";
 import Clothing from "./component/clothings/Clothing";
+import AddClothing from './component/clothings/AddClothing';
+
+import AllShoe from "./component/shoes/AllShoe";
+import Shoe from "./component/shoes/Shoe";
+import AddShoe from './component/shoes/AddShoe';
+
 import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
 import UserProfile from "./component/user/UserProfile";
 import Navigation from "./component/Navigation";
 import About from "./component/About";
 import Axios from "axios";
-import AddClothing from './component/clothings/AddClothing';
 import { decode } from "jsonwebtoken";
 import PrivateRoute from "./component/PrivateRoute";
 import { Alert } from "react-bootstrap";
@@ -142,12 +147,14 @@ export default class App extends Component {
 
               <PrivateRoute exact path="/clothing" isAuth={isAuth} component={AllClothing} />
               {/* <Route path="/clothing" exact render={() => <AllClothing />} /> */}
-
               <PrivateRoute exact path="/clothing/:id" isAuth={isAuth} component={Clothing} />
               {/* <Route path="/clothing/:id" exact render={(props) => <Clothing {...props} />} /> */}
-
               <PrivateRoute exact path="/clothings/add" isAuth={isAuth} component={AddClothing} />
               {/* <Route path="/clothings/add" exact render={() => <AddClothing />} /> */}
+
+              <PrivateRoute exact path="/shoe" isAuth={isAuth} component={AllShoe} />
+              <PrivateRoute exact path="/shoe/:id" isAuth={isAuth} component={Shoe} />
+              <PrivateRoute exact path="/shoes/add" isAuth={isAuth} component={AddShoe} />
 
               <PrivateRoute exact path="/user" isAuth={isAuth} component={UserProfile} />
 
