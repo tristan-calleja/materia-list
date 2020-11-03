@@ -37,7 +37,7 @@ function Navigation({ user, logout }) {
                             <Link className="nav-link text-dark" to="/shoe">
                                 Shoes
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/watch">
                                 Watches
                             </Link>
                             <Link className="nav-link text-dark" to="/clothing/something">

@@ -9,6 +9,10 @@ import AllShoe from "./component/shoes/AllShoe";
 import Shoe from "./component/shoes/Shoe";
 import AddShoe from './component/shoes/AddShoe';
 
+import AllWatch from "./component/watches/AllWatch";
+import Watch from "./component/watches/Watch";
+import AddWatch from './component/watches/AddWatch';
+
 import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
 import UserProfile from "./component/user/UserProfile";
@@ -155,6 +159,10 @@ export default class App extends Component {
               <PrivateRoute exact path="/shoe" isAuth={isAuth} component={AllShoe} />
               <PrivateRoute exact path="/shoe/:id" isAuth={isAuth} component={Shoe} />
               <PrivateRoute exact path="/shoes/add" isAuth={isAuth} component={AddShoe} />
+
+              <PrivateRoute exact path="/watch" isAuth={isAuth} component={AllWatch} />
+              <PrivateRoute exact path="/watch/:id" isAuth={isAuth} component={Watch} />
+              <PrivateRoute exact path="/watches/add" isAuth={isAuth} component={AddWatch} />
 
               <PrivateRoute exact path="/user" isAuth={isAuth} component={UserProfile} />
 

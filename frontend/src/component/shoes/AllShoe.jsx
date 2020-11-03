@@ -60,9 +60,6 @@ export default class AllShoe extends Component {
                 </Col>
             </Row>
         </Container >
-        <Container>
-
-          {/* <NewTable /> */}
 
           <Table striped bordered hover variant="dark">
             <thead>
@@ -108,7 +105,6 @@ export default class AllShoe extends Component {
               </tbody>
           </Table>
 
-        </Container>
       </div>
     );
   }

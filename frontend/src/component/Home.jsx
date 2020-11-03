@@ -60,10 +60,12 @@ export default class Home extends Component {
                             </blockquote>
                         </Card>
                         <Card>
+                            <Link to="/watch" className="text-warning stretched-link" style={{ color:"black" }}>
                             <Card.Body>
                             <Card.Title className="heading">Watches</Card.Title>
                             </Card.Body>
                             <Card.Img src={watch} />
+                            </Link >
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">
