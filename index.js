@@ -13,6 +13,8 @@ app.use(express.static(path.join(__dirname, "frontend", "build"))) //Heroku depl
 
 //=== Routes
 app.use("/api/clothings", require("./routes/clothing.route"));
+app.use("/api/shoes", require("./routes/shoe.route"));
+app.use("/api/watches", require("./routes/watch.route"));
 app.use("/api/auth", require("./routes/auth.route"));
 
 //=== 404 errors

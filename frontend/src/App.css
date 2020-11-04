@@ -255,3 +255,7 @@ main {
   -webkit-transition-delay: 150ms;
   transition-delay: 150ms;
 }
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+}

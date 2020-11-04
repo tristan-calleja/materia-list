@@ -9,13 +9,17 @@ function Navigation({ user, logout }) {
                 <Navbar className="color-nav navbar-style" expand="lg" variant="light">
                     {user ? (
                     <>
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand>
+                        <Link to="/" >
                         <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
+                        </Link>
                     </Navbar.Brand>
                     </>
                     ) : (
-                    <Navbar.Brand href="/login">
+                    <Navbar.Brand>
+                        <Link to="/login" >
                         <img src={logomaterialistblack} style={{width:50, marginTop: -7}} alt="logo materialist" />
+                        </Link>
                     </Navbar.Brand>
                     )}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,14 +34,14 @@ function Navigation({ user, logout }) {
                             <Link className="nav-link text-dark" to="/clothing">
                                 Clothing
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/shoe">
                                 Shoes
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
+                            <Link className="nav-link text-dark" to="/watch">
                                 Watches
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
-                                Wines
+                            <Link className="nav-link text-dark" to="/gift">
+                                Gifts
                             </Link>
                             </>
                             ) : (
@@ -66,9 +70,10 @@ function Navigation({ user, logout }) {
                             <Link to="/login" className="nav-link">
                                 <Button variant="outline-dark"> Login </Button>
                             </Link>
-                            <Link to="/register" className="nav-link">
+                            {/* REGISTER BUTTON DISABLED SINCE IT'S A PERSONAL APP */}
+                            {/* <Link to="/register" className="nav-link">
                                 <Button variant="dark"> Register </Button>
-                            </Link>
+                            </Link> */}
                         </>
                         )}
                         </Nav>

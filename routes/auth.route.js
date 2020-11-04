@@ -94,6 +94,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+
 router.get("/user", checkToken, async (req, res) => {
   try {
     let user = await User.findById(req.user.id, "-password");
@@ -123,7 +124,7 @@ router.put("/user", checkToken, async (req, res) => {
     let user = await User.findByIdAndUpdate(req.user.id, editedUser);
     if (user) {
       res.status(200).json({
-        message: "User has been editied",
+        message: "User has been edited",
         user,
       });
     }

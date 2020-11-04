@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Card, CardColumns } from "react-bootstrap";
 import budget from '../images/budget.png';
-import wine from '../images/wine.png';
+import gifts from '../images/gifts.jpg';
 import clothing from '../images/clothing.png';
 import watch from '../images/MKII.png';
+import shoes from '../images/Ascot-Kaan-Shoes.jpg'
 import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
@@ -16,46 +17,9 @@ export default class Home extends Component {
                             <Card.Body>
                             <Card.Title className="heading">My Budget</Card.Title>
                             <Card.Text>
-                                This will be the budget section
+                                This will be the budget section - please bear with us
                             </Card.Text>
                             </Card.Body>
-                        </Card>
-                        <Card className="p-3 text-right">
-                            <blockquote className="blockquote mb-0 card-body">
-                            <p>
-                                “La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer.”
-                            </p>
-                            <footer className="blockquote-footer">
-                                <small className="text-muted">
-                                <cite title="Source Title">Antoine de Saint Exupéry</cite>
-                                </small>
-                            </footer>
-                            </blockquote>
-                        </Card>
-                        <Card>
-                            <Card.Img variant="top" src={wine} />
-                            <Card.Body>
-                            <Card.Title className="heading">Wines</Card.Title>
-                            <Card.Text>
-                                This will be the budget section
-                            </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card>
-                            {/* <a href="/clothing" class="text-warning stretched-link"> */}
-                            <Link to="/clothing" className="text-warning stretched-link">
-                            <Card.Img variant="top" src={clothing} />
-                            <Card.Body>
-                            <Card.Title className="heading">Clothing</Card.Title>
-                            <Card.Text>
-                                This will be the clothing section.{' '}
-                            </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                            <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
-                            {/* </a> */}
-                            </Link >
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">
@@ -70,16 +34,40 @@ export default class Home extends Component {
                             </blockquote>
                         </Card>
                         <Card>
+                            <Link to="/gift" className="text-warning stretched-link" style={{ color:"black" }}>
+                            <Card.Img variant="top" src={gifts} />
+                            <Card.Body>
+                            <Card.Title className="heading">Gifts</Card.Title>
+                            </Card.Body>
+                            </Link >
+                        </Card>
+                        <Card>
+                            <Link to="/clothing" className="text-warning stretched-link" style={{ textDecoration: 'none' }}>
+                            <Card.Img variant="top" src={clothing} />
+                            <Card.Body>
+                            <Card.Title className="heading">Clothing</Card.Title>
+                            </Card.Body>
+                            </Link >
+                        </Card>
+                        <Card className="p-3 text-right">
+                            <blockquote className="blockquote mb-0 card-body">
+                            <p>
+                                “La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer.”
+                            </p>
+                            <footer className="blockquote-footer">
+                                <small className="text-muted">
+                                <cite title="Source Title">Antoine de Saint Exupéry</cite>
+                                </small>
+                            </footer>
+                            </blockquote>
+                        </Card>
+                        <Card>
+                            <Link to="/watch" className="text-warning stretched-link" style={{ color:"black" }}>
                             <Card.Body>
                             <Card.Title className="heading">Watches</Card.Title>
-                            <Card.Text>
-                                This will be the watch section.{' '}
-                            </Card.Text>
                             </Card.Body>
                             <Card.Img src={watch} />
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
+                            </Link >
                         </Card>
                         <Card className="text-right">
                             <blockquote className="blockquote mb-0 card-body">
@@ -94,15 +82,12 @@ export default class Home extends Component {
                             </blockquote>
                         </Card>
                         <Card>
+                            <Link to="/shoe" className="text-warning stretched-link" style={{ color:"black" }}>
+                            <Card.Img variant="top" src={shoes} />
                             <Card.Body>
                             <Card.Title className="heading">Shoes</Card.Title>
-                            <Card.Text>
-                                This will be the shoes section
-                            </Card.Text>
-                            <Card.Text>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Text>
                             </Card.Body>
+                            </Link >
                         </Card>
                     </CardColumns>
                 </Container>

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const clothingSchema = new mongoose.Schema({
+const watchSchema = new mongoose.Schema({
     brand: String,
     piece: String,
     category: String,
@@ -15,7 +15,7 @@ const clothingSchema = new mongoose.Schema({
     }, 
 { timestamps: true });
 
-const Clothing = mongoose.model("Clothing", clothingSchema);
+const Watch = mongoose.model("Watch", watchSchema);
 
 
-module.exports = Clothing;
+module.exports = Watch;

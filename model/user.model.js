@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema(
       default: "images/logo-materia-list.png"
     },
     about: String,
+    clothings:[{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Clothings"
+  }]
   },
   { timestamps: true }
 );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Row, Col, Label, Form, Container, Image, Button } from "react-bootstrap";
+import { Row, Col, Container, Image, Button } from "react-bootstrap";
 import clothing from '../images/clothing.png';
 
 export default class About extends Component {
@@ -47,7 +47,7 @@ export default class About extends Component {
                                 <Button size="sm" variant="dark" className="mr-2">Clothing</Button>
                                 <Button size="sm" variant="dark" className="mr-2">Shoes</Button>
                                 <Button size="sm" variant="dark" className="mr-2">Watches</Button>
-                                <Button size="sm" variant="dark" >Wines</Button>
+                                <Button size="sm" variant="dark" >Gifts</Button>
                             </Col>
 
                             <Col>
@@ -57,6 +57,7 @@ export default class About extends Component {
                         </Row>
                         </div>
                     </div>
+
                     {/* <div className="wrapper">
                         <div className="images">
                             <div className="image"></div>
@@ -79,6 +80,7 @@ export default class About extends Component {
                         </svg>
                         </div>
                     </div> */}
+                    
             </Container>
             
         )

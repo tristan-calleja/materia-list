@@ -2,58 +2,40 @@ import React, { Component } from "react";
 import { Container, Row, Col, Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-import { useTable, useFilters, useGlobalFilter, useAsyncDebounce } from 'react-table';
-import {matchSorter} from 'match-sorter';
-import NewTable from "./NewTable";
-// import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 
 const URL = process.env.REACT_APP_URL;
 
-export default class AllClothing extends Component {
+export default class AllShoe extends Component {
   
     state = {
-    clothings: [],
+    shoes: [],
     };
 
-    //VERSION POST AUTHENTICATION
-  fetchClothings = () => {
+  fetchShoes = () => {
     let token = localStorage.getItem("token");
 
-    Axios.get(`${URL}/clothings`, {
+    Axios.get(`${URL}/shoes`, {
       headers: {
         "x-auth-token": token,
       },
     })
       .then((res) => {
-        this.setState({ clothings: res.data.clothings });
+        this.setState({ shoes: res.data.shoes });
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-    //VERSION PRIOR AUTHENTICATION
-  // fetchClothings = () => {
-
-  //   Axios.get(`${URL}/clothings`)
-  //   //   console.log("it works or not?");
-  //     .then((res) => {
-  //       this.setState({ clothings: res.data.clothings });
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
-  deleteClothing = (e) => {
+  deleteShoe = (e) => {
     // console.log(e.target.id);
-    Axios.delete(`${URL}/clothings/${e.target.id}`).then((res) => {
-      this.fetchClothings();
+    Axios.delete(`${URL}/shoes/${e.target.id}`).then((res) => {
+      this.fetchShoes();
     });
   };
 
   componentDidMount() {
-    this.fetchClothings();
+    this.fetchShoes();
   }
 
   render() {
@@ -65,12 +47,12 @@ export default class AllClothing extends Component {
         <Container fluid className="mb-2">
             <Row>
                 <Col className="col-4">
-                    <h3  className="heading">Your Clothing Wishlist</h3>
+                    <h3  className="heading">Your Shoes Wishlist</h3>
                 </Col>
                 <Col className="col-6">
                 </Col>
                 <Col className="col-2">
-                <Link className="nav-link" to="/clothings/add">
+                <Link className="nav-link" to="/shoes/add">
                     <Button variant="info">
                         Add To List
                     </Button>
@@ -78,10 +60,7 @@ export default class AllClothing extends Component {
                 </Col>
             </Row>
         </Container >
-        
 
-          {/* <NewTable /> */}
-        
           <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
@@ -97,17 +76,17 @@ export default class AllClothing extends Component {
                 </tr>
             </thead>
             <tbody>
-                {this.state.clothings.map((clothing) => (
-                    <tr key={clothing._id}>
-                    {/* <td> {clothing._id} </td> */}
-                    <td> {clothing.brand} </td>
-                    <td> {clothing.piece} { } <Link to={`/clothing/${clothing._id}`}>Details</Link> </td>
-                    <td> {clothing.category} </td>
-                    <td> {clothing.priority} </td>
-                    <td> {clothing.price} </td>
-                    <td> {clothing.notes} </td>
+                {this.state.shoes.map((shoe) => (
+                    <tr key={shoe._id}>
+                    {/* <td> {shoe._id} </td> */}
+                    <td> {shoe.brand} </td>
+                    <td> {shoe.piece} { } <Link to={`/shoe/${shoe._id}`}>Details</Link> </td>
+                    <td> {shoe.category} </td>
+                    <td> {shoe.priority} </td>
+                    <td> {shoe.price} </td>
+                    <td> {shoe.notes} </td>
                     <td>
-                        <a href={clothing.website} style={{display: "table-cell"}} target="_blank" rel="noopener noreferrer">
+                        <a href={shoe.website} style={{display: "table-cell"}} target="_blank" rel="noopener noreferrer">
                             Visit
                         </a>
                     </td>
@@ -115,7 +94,7 @@ export default class AllClothing extends Component {
                         <Button
                             onClick={this.deleteClothing}
                             variant="danger"
-                            id={clothing._id}
+                            id={shoe._id}
                             size="sm"
                         >
                             Delete

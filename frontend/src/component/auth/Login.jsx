@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Row, Col, Form, Button, Container } from "react-bootstrap";
 
 export default class Login extends Component {
@@ -58,16 +59,18 @@ export default class Login extends Component {
                       </Button>
                       </Col>
                       <Col>
-                      <Button variant="outline-dark" block  >
-                        {" "}
-                        Register
-                      </Button>
+                      <Link to="/register">
+                        <Button variant="outline-dark" block >
+                            {" "}
+                            Register
+                        </Button>
+                      </Link>
                     </Col>
                   </Row>
 
                   <Row>
                     <p className="forgot-password text-right">
-                        Forgot <a href="#">password?</a>
+                        Forgot <a href="https://www.google.com">password?</a>
                     </p>
                   </Row>
 
