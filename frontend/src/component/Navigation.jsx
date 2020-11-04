@@ -40,8 +40,8 @@ function Navigation({ user, logout }) {
                             <Link className="nav-link text-dark" to="/watch">
                                 Watches
                             </Link>
-                            <Link className="nav-link text-dark" to="/clothing/something">
-                                Wines
+                            <Link className="nav-link text-dark" to="/gift">
+                                Gifts
                             </Link>
                             </>
                             ) : (

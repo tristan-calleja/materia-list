@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Card, CardColumns } from "react-bootstrap";
 import budget from '../images/budget.png';
-import wine from '../images/wine.png';
+import gifts from '../images/gifts.jpg';
 import clothing from '../images/clothing.png';
 import watch from '../images/MKII.png';
 import shoes from '../images/Ascot-Kaan-Shoes.jpg'
@@ -34,10 +34,12 @@ export default class Home extends Component {
                             </blockquote>
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src={wine} />
+                            <Link to="/gift" className="text-warning stretched-link" style={{ color:"black" }}>
+                            <Card.Img variant="top" src={gifts} />
                             <Card.Body>
-                            <Card.Title className="heading">Wines</Card.Title>
+                            <Card.Title className="heading">Gifts</Card.Title>
                             </Card.Body>
+                            </Link >
                         </Card>
                         <Card>
                             <Link to="/clothing" className="text-warning stretched-link" style={{ textDecoration: 'none' }}>

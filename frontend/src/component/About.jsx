@@ -47,7 +47,7 @@ export default class About extends Component {
                                 <Button size="sm" variant="dark" className="mr-2">Clothing</Button>
                                 <Button size="sm" variant="dark" className="mr-2">Shoes</Button>
                                 <Button size="sm" variant="dark" className="mr-2">Watches</Button>
-                                <Button size="sm" variant="dark" >Wines</Button>
+                                <Button size="sm" variant="dark" >Gifts</Button>
                             </Col>
 
                             <Col>
